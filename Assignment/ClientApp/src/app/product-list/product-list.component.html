@@ -1,0 +1,21 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th *ngFor="let c of columns">
+        <div>
+          {{ c.title }}
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let v of products.items">
+      <td>{{ v.Key }}</td>
+    </tr>
+  </tbody>
+</table>
+<app-pagination 
+  [total-items]="products.totalItems" 
+  [page-size]="query.pageSize" 
+  (page-changed)="onPageChange($event)"
+></app-pagination>
