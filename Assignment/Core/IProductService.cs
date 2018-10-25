@@ -6,7 +6,7 @@ namespace Assignment.Core
 {
     public interface IProductService
     {
-        List<Product> GetAll();
+        IEnumerable<Product> GetAll();
         void UploadProducts(IFormFile file);
     }
 }

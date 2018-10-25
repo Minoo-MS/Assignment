@@ -36,7 +36,7 @@ namespace Assignment.Core.Services
             CsvToDataTableService.InsertDataIntoSQLServerUsingSQLBulkCopy(dataTable);
         }
 
-        public List<Product> GetAll()
+        public IEnumerable<Product> GetAll()
         {
             return _repository.GetAll().ToList();
         }

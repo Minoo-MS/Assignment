@@ -28,6 +28,7 @@ namespace Assignment.Core.Services
 
             using (StreamReader sr = new StreamReader(strFilePath))
             {
+                sr.ReadLine();// skip first
                 while (!sr.EndOfStream)
                 {
                     string[] rows = sr.ReadLine().Split(',');

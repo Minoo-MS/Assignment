@@ -9,13 +9,21 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let v of products.items">
-      <td>{{ v.Key }}</td>
+    <tr *ngFor="let v of products">
+      <td>{{ v.key }}</td>
+      <td>{{ v.artikelCode }}</td>
+      <td>{{ v.colorCode }}</td>
+      <td>{{ v.description }}</td>
+      <td>{{ v.price }}</td>
+      <td>{{ v.deliveredIn }}</td>
+      <td>{{ v.q1 }}</td>
+      <td>{{ v.size }}</td>
+      <td>{{ v.color }}</td>
     </tr>
   </tbody>
 </table>
 <app-pagination 
-  [total-items]="products.totalItems" 
+[total-items]="totalItems"
   [page-size]="query.pageSize" 
   (page-changed)="onPageChange($event)"
 ></app-pagination>

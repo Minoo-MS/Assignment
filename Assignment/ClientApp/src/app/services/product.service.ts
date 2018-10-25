@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class ProductService {
-  private url = 'https://localhost:5001/api/product';
+  private url = 'http://localhost:5001/api/product';
   constructor(private http: HttpClient) {}
 
   public save(data: any): Observable<any> {
