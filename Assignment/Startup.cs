@@ -1,4 +1,5 @@
 using Assignment.Core;
+using Assignment.Core.Models;
 using Assignment.Core.Services;
 using Assignment.Persistence;
 using Microsoft.AspNetCore.Builder;
@@ -24,6 +25,8 @@ namespace Assignment
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.Configure<FileSettings>(Configuration.GetSection("FileSettings"));
             services.AddScoped<IProductsRepository, ProductsRepository>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();

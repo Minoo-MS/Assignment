@@ -1,7 +1,8 @@
-<h2>Photos</h2>
+<h2>Upload products</h2>
 <input  type="file" (change)="uploadFile($event)"> 
 <div class="progress" *ngIf="progress && progress.percentage < 100">
   <div class="progress-bar" [style.width]="progress.percentage + '%'">
     <span class="sr-only">{{ progress.percentage }}% Complete</span>
   </div>
 </div>
+<ng2-toasty [position]="'top-right'"></ng2-toasty>

@@ -1,0 +1,24 @@
+:host {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.list {
+  max-width: 550px;
+  margin: auto;
+}
+
+li {
+  margin-bottom: 5px;
+}
+.customPagination  /deep/ .ngx-pagination li ,.customPagination  /deep/ .ngx-pagination li a {
+  padding: 2px 7px;
+}
+.customPagination  /deep/ .ngx-pagination a:hover,
+.customPagination  /deep/ .ngx-pagination button:hover {
+  background: #e6e6e6;
+  text-decoration: none !important;
+}

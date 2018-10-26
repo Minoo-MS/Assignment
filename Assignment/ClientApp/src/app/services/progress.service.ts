@@ -7,6 +7,7 @@ export class ProgressService {
   private uploadProgress: Subject<any>;
 
   startTracking() {
+    debugger;
     this.uploadProgress = new Subject();
     return this.uploadProgress;
   }

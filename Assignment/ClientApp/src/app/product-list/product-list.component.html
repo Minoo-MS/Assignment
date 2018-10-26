@@ -9,7 +9,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let v of products">
+    <tr *ngFor="let v of products | paginate: { itemsPerPage: 20, currentPage: p }">
       <td>{{ v.key }}</td>
       <td>{{ v.artikelCode }}</td>
       <td>{{ v.colorCode }}</td>
@@ -22,8 +22,8 @@
     </tr>
   </tbody>
 </table>
-<app-pagination 
-[total-items]="totalItems"
-  [page-size]="query.pageSize" 
-  (page-changed)="onPageChange($event)"
-></app-pagination>
+<div class="text-center">
+  <pagination-controls  class="customPagination"
+                       [maxSize]="7"
+                       (pageChange)="p = $event"></pagination-controls>
+</div>

@@ -7,12 +7,14 @@ export class ProductService {
   private url = 'http://localhost:5001/api/product';
   constructor(private http: HttpClient) {}
 
-  public save(data: any): Observable<any> {
+   upload(data: any) {
     debugger;
-    return this.http.post(this.url + '/UploadFiles/', data);
+    var formData = new FormData();
+    formData.append('file', data);
+   return this.http.post(this.url + '/UploadFiles/', formData);
   }
 
-  public fetch(): Observable<any> {
+   fetch(): Observable<any> {
     return this.http.get(this.url);
   }
 }
